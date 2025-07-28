@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva</title>
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Eagle+Lake&family=Oswald&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="./asset/img/logo_celeste_pawport.png" alt="" />
+        <a href="./index.html" class="titulo">PawPort</a>
+        <ul class="nav_links">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a target="_blank" href="./reserva.html">Reserva</a></li>
+          <li><a target="_blank" href="./servicios.html">Servicios</a></li>
+          <li><a target="_blank" href="./destinos.html">Destinos</a></li>
+          <li><a target="_blank" href="./nosotros.html">Acerca de</a></li>
+        </ul>
+        <button class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
+    <div class="presentacion">
+      <div>
+        <h1>Transporte Seguro de Mascotas</h1>
+        <h2>Pawport</h2>
+        <h3>"Porque su viaje también importa"</h3>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <section class="seccion_form">
+      <h3>Solicita un traslado</h3>
+      <form id="form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input
+          type="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="text"
+          name="telefono"
+          placeholder="Teléfono de contacto"
+          required
+        />
+        <select name="mascota" required>
+          <option value="">Tipo de mascota</option>
+          <option value="perro">Perro</option>
+          <option value="gato">Gato</option>
+          <option value="otro">Otro</option>
+        </select>
+        <textarea
+          name="detalles"
+          placeholder="Detalles del traslado (origen, destino, necesidades especiales...)"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="mensaje"></p>
+    </section>
+
+    <footer class="footer">
+      &copy; 2025 PAWPORT - Transporte Seguro de Mascotas. Todos los derechos
+      reservados.
+    </footer>
+
+    <script src="./asset/js/scripts.js"></script>
+  </body>
+</html>

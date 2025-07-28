@@ -1,0 +1,428 @@
+/* index.html */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --color-fondo: white;
+  --color-primero: #3b28cc;
+  --color-segundo: #2667ff;
+  --color-tercero: #3f8efc;
+  --color-cuarto: #87bfff;
+  --color-quinto: #c44141;
+}
+body {
+  background-color: white;
+  color: white;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: var(--color-segundo);
+}
+.nav img {
+  width: 60px;
+  height: 60px;
+}
+.titulo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  color: var(--color-segundo);
+}
+.nav_links {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  right: -100%;
+  top: 90px;
+  flex-direction: column;
+  background-color: #2667ff9f;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  list-style: none;
+}
+.nav_links.active {
+  right: 0;
+}
+.nav_links a {
+  display: block;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  padding: 1rem;
+}
+.nav_links li {
+  margin: 2.5rem, 0;
+  font-size: 25px;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+/* Hamburguesa animada */
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Presentacion */
+.presentacion {
+  background-image: url(../img/img.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.presentacion div {
+  background-color: #2667ff7a;
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+}
+.presentacion div h1 {
+  font-size: 40px;
+}
+.presentacion div h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+}
+
+/* Seccion */
+.seccion h4 {
+  background-color: var(--color-segundo);
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  padding: 30px 15px;
+  text-align: center;
+}
+.seccion p {
+  background-color: #2667ff8c;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 30px 20px;
+  text-align: center;
+}
+.seccion a {
+  text-decoration: none;
+  color: #c44141;
+}
+.seccion_beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.beneficios {
+  width: 100%;
+  color: var(--color-segundo);
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  padding: 15px;
+  text-align: center;
+}
+.beneficios h4 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+/* footer */
+footer {
+  background-color: var(--color-segundo);
+  padding: 30px 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+/* reserva.html */
+.seccion_form {
+  border: 2px solid var(--color-segundo);
+  border-radius: 15px;
+  color: var(--color-segundo);
+  padding: 30px;
+  margin: 40px 15%;
+  font-size: 25px;
+  text-align: center;
+}
+.seccion_form h3 {
+  padding: 15px 0px;
+}
+#form input {
+  background-color: #87bfffd7;
+  color: white;
+  width: 100%;
+  padding: 30px 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+#form input::placeholder {
+  color: white;
+}
+#form select {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+}
+#form textarea {
+  width: 90%;
+  border: none;
+  border-radius: 12px;
+  background-color: lab(88.87% -2.52 -16.93);
+  padding: 10px;
+  margin: 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+#form button {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+#mensaje {
+  color: var(--color-tercero);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* destinos.html */
+.destinos {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 20px 20px;
+  margin: 50px;
+}
+.destino h4 {
+  color: var(--color-tercero);
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px 0px;
+}
+.destino img {
+  width: 100%;
+  background-position: center;
+  border-radius: 15px;
+}
+.destino p {
+  color: var(--color-segundo);
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 0px;
+}
+.destino li {
+  color: var(--color-tercero);
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+  text-align: center;
+  list-style: none;
+  padding: 10px 0px;
+}
+
+/* nosotros.html */
+.nosotros {
+  display: inline-block;
+  align-items: center;
+  color: var(--color-tercero);
+  font-family: "Roboto", sans-serif;
+  margin: 70px;
+  align-items: center;
+}
+.nos {
+  border: 2px solid var(--color-quinto);
+  border-radius: 18px;
+  text-align: center;
+  margin: 40px 0px;
+}
+.nosotros .nos h4 {
+  color: var(--color-segundo);
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  padding: 30px 0px;
+}
+.nosotros p {
+  padding: 30px;
+  font-size: 23px;
+}
+.nosotros img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+/* servicios.html */
+.servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 25px 25px 50px;
+  color: var(--color-tercero);
+}
+.servicios_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.servicios_img img {
+  width: 70px;
+  height: 70px;
+  border: 5px solid var(--color-quinto);
+  border-radius: 50%;
+  margin: 30px 0px 0px;
+}
+.servicios_items h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 35px;
+  margin: 0px 0px 30px;
+}
+.servicios_items p {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin: 0px 25px;
+}
+
+/* media query */
+@media screen and (min-width: 850px) {
+  .nav_links {
+    position: static;
+    flex-direction: row;
+    background-color: #2667ffa9;
+    box-shadow: none;
+    width: auto;
+    gap: 2rem;
+    left: 0;
+    border-radius: 20px;
+  }
+  .nav_links li {
+    font-size: 18px;
+  }
+  nav {
+    margin-right: 10px;
+  }
+  nav a {
+    margin: 5px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .seccion_beneficios {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .seccion_beneficios .beneficios {
+    margin: 50px 30px;
+    font-size: 30px;
+  }
+  .beneficios .emoji {
+    font-size: 40px;
+  }
+  footer {
+    padding: 50px 25px;
+    font-size: 25px;
+  }
+  /* nosostros.html */
+  .nosotros {
+    margin: 60px 200px;
+  }
+  .nosotros .nos {
+    margin: 60px 0px;
+  }
+
+  /* servicios.html */
+  .servicios {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 100px 60px;
+  }
+  .servicios_items {
+    max-width: 30%;
+  }
+  .servicios_img img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 30px;
+  }
+
+  /* destinos.html */
+  .destinos {
+    margin: 140px;
+    gap: 60px;
+  }
+  .destino h4 {
+    font-size: 40px;
+  }
+  .destino p {
+    font-size: 30px;
+    margin: 20px 0px;
+  }
+  .destino li {
+    font-size: 25px;
+  }
+
+  /* reserva.html */
+  .seccion_form {
+    margin: 100px 20%;
+    font-size: 20px;
+  }
+  #form input {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .nav_links li {
+    font-size: 20px;
+  }
+  .seccion_beneficios {
+    margin: 0px 20%;
+  }
+
+  /* reserva.html */
+  .seccion_form {
+    margin: 100px 30%;
+  }
+}
