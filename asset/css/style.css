@@ -173,7 +173,7 @@ footer {
   border-radius: 15px;
   color: var(--color-segundo);
   padding: 30px;
-  margin: 40px 15%;
+  margin: 60px 15%;
   font-size: 25px;
   text-align: center;
 }
@@ -184,7 +184,7 @@ footer {
   background-color: #87bfffd7;
   color: white;
   width: 100%;
-  padding: 30px 5px 10px;
+  padding: 20px 5px 10px;
   margin-bottom: 10px;
   border-radius: 30px;
   border: none;
@@ -230,7 +230,7 @@ footer {
 /* destinos.html */
 .destinos {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 2fr;
   gap: 20px 20px;
   margin: 50px;
 }
@@ -327,6 +327,12 @@ footer {
 }
 
 /* media query */
+@media screen and (min-width: 480px) {
+  /* destinos.html */
+  .destinos {
+    grid-template-columns: 2fr 2fr;
+  }
+}
 @media screen and (min-width: 850px) {
   .nav_links {
     position: static;
@@ -356,14 +362,14 @@ footer {
   }
   .seccion_beneficios .beneficios {
     margin: 50px 30px;
-    font-size: 30px;
+    font-size: 25px;
   }
   .beneficios .emoji {
     font-size: 40px;
   }
   footer {
     padding: 50px 25px;
-    font-size: 25px;
+    font-size: 20px;
   }
   /* nosostros.html */
   .nosotros {
@@ -390,14 +396,14 @@ footer {
 
   /* destinos.html */
   .destinos {
-    margin: 140px;
+    margin: 120px 100px;
     gap: 60px;
   }
   .destino h4 {
-    font-size: 40px;
+    font-size: 28px;
   }
   .destino p {
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 0px;
   }
   .destino li {
@@ -406,7 +412,7 @@ footer {
 
   /* reserva.html */
   .seccion_form {
-    margin: 100px 20%;
+    margin: 80px 20%;
     font-size: 20px;
   }
   #form input {
@@ -414,6 +420,10 @@ footer {
   }
 }
 @media screen and (min-width: 1020px) {
+  .destinos {
+    margin: 140px 50px;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+  }
   .nav_links li {
     font-size: 20px;
   }
