@@ -8,26 +8,24 @@ hamburger.addEventListener("click", () => {
 });
 
 /* storage */
-
-const form = document.getElementById("form");
+const formulario = document.getElementById("form");
 const mensaje = document.getElementById("mensaje");
 
-//save datos
-function guardarDatos() {
-  const datos = {
-    nombre: form.nombre.value,
-    email: form.email.value,
-    telefono: form.telefono.value,
-    mascota: form.mascota.value,
-    detalles: form.detalles.value,
+formulario.addEventListener("submit", function (event) {
+  event.preventDefault(); //evita el envio y que se recargue la página
+  //capturamos los datos del usuario
+  const datosUser = {
+    nombre: document.getElementById("nombreForm").value,
+    email: document.getElementById("emailForm").value,
+    telefono: document.getElementById("telefonoForm").value,
+    mascota: document.getElementById("mascotaForm").value,
+    detalles: document.getElementById("detallesForm").value,
   };
-  localStorage.setItem("formTraslado", JSON.stringify(datos));
-}
-
-// enviar form
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // No enviar
-  guardarDatos();
+  //guardamos en localStorage (comollamarenconsola, conviertoElObjetoAjson.yLoConvierteEnUnString())
+  localStorage.setItem("datosFormulario", JSON.stringify(datosUser));
+  //mensaje para el usuario
   mensaje.textContent = "¡Enviado!";
+  //limpia el formulario
+  formulario.reset();
 });
 

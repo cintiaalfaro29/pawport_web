@@ -295,6 +295,7 @@ footer {
 }
 
 /* servicios.html */
+/* cambiar la linea roja de las img para que se vea mas sutil */
 .servicios {
   display: flex;
   flex-direction: column;
