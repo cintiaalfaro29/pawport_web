@@ -38,7 +38,7 @@ body {
   display: flex;
   padding: 0px;
   margin: 0px;
-  position: fixed;
+  position: absolute;
   right: -100%;
   top: 90px;
   flex-direction: column;
