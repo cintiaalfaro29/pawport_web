@@ -7,10 +7,6 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-/* inicializacion de emailjs */
-import emailjs from "@emailjs/browser";
-emailjs.init("00Ul85UgAn0S9qses"); /* public key */
-
 /* storage */
 const formulario = document.getElementById("form");
 const mensaje = document.getElementById("mensaje");
@@ -63,17 +59,6 @@ formulario.addEventListener("submit", function (event) {
   guardarUsuarios.push(datosUser);
   //guardamos en localStorage (comollamarenconsola, conviertoElObjetoAjson.yLoConvierteEnUnString())
   localStorage.setItem("datosFormulario", JSON.stringify(guardarUsuarios));
-
-  /* API emailjs */
-  const ultimoUsuario = datosUser;
-  emailjs.send("service_m0jdmsw", "template_4dkwur7", {
-    nombre: ultimoUsuario.nombre,
-    email: ultimoUsuario.email,
-    telefono: ultimoUsuario.telefono,
-    mascota: ultimoUsuario.mascota,
-    detalles: ultimoUsuario.detalles,
-  });
-  /* - */
 
   //mensaje para el usuario
   mensaje.textContent = "¡Enviado!";
