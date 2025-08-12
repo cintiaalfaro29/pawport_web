@@ -64,8 +64,8 @@ formulario.addEventListener("submit", function (event) {
   const btn = document.getElementById("button");
   btn.textContent = "Enviando...";
 
-  const serviceID = "service_m0jdmsw";
-  const templateID = "template_4dkwur7";
+  const serviceID = "service_id_false";
+  const templateID = "template_id_false";
 
   emailjs.sendForm(serviceID, templateID, formulario).then(
     () => {
