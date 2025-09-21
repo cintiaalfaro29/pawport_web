@@ -15,14 +15,16 @@
 body {
   background-color: white;
   color: white;
+  
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   padding: 1rem 2rem;
   color: var(--color-segundo);
+  position: relative;
+  
 }
 .nav img {
   width: 60px;
@@ -39,7 +41,7 @@ body {
   padding: 0px;
   margin: 0px;
   position: absolute;
-  right: -100%;
+  right: +100%;
   top: 90px;
   flex-direction: column;
   background-color: #2667ff9f;
@@ -60,7 +62,7 @@ body {
   padding: 1rem;
 }
 .nav_links li {
-  margin: 2.5rem, 0;
+  margin: 1rem 0;
   font-size: 25px;
 }
 .hamburger {
@@ -371,7 +373,7 @@ footer {
     padding: 50px 25px;
     font-size: 20px;
   }
-  /* nosostros.html */ 
+  /* nosostros.html */
   .nosotros {
     margin: 60px 200px;
   }
